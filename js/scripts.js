@@ -10,7 +10,7 @@
 
 var getBottles = function(amount) {
    for(var i = amount; i > 0; i--) {
-var bottlesAmount = i + " bottles of absinthe on the wall " + i + " bottles of absinth, take a slug and pass it down " + (i -1) + " bottles of absinthe " + " no more bottles of absinthe on the wall, go to the grave you cannot drink more absinthe ";
+var bottlesAmount = i + " bottles of absinthe on the wall " + i + " bottles of absinthe, take a slug and pass it down " + (i -1) + " bottles of absinthe " + " no more bottles of absinthe on the wall, go to the grave you cannot drink more absinthe ";
   }
 
   return bottlesAmount;
@@ -18,9 +18,9 @@ var bottlesAmount = i + " bottles of absinthe on the wall " + i + " bottles of a
 
 $(document).ready(function() {
   $("form#bottle").submit(function() {
-    var amount = ($("input#amount").val());
+    var amount = ($("input#number").val());
 
-    $(".bottles").text(getBottles);
+    $(".song").text(bottlesAmount);
     $(".result").show();
      event.preventDefault();
 
