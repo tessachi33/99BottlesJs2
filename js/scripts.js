@@ -10,10 +10,10 @@
 
 var getBottles = function(amount) {
    for(var i = amount; i > 0; i--) {
-    var bottlesAmount = i + " bottles of absinthe on the wall " + i + " bottles of absinthe, take a slug and pass it down, " + (i -1) + " bottles of absinthe on the wall. " + " No more bottles of absinthe on the wall, go to the grave you cannot drink more absinthe ";
+    var bottlesAmount = i + " bottles of absinthe on the wall " + i + " bottles of absinthe, take a slug and pass it down, " + (i - 1) + " bottles of absinthe on the wall. " + " No more bottles of absinthe on the wall, go to the grave you cannot drink more absinthe ";
     }
 
-  return bottlesAmount ;
+  return bottlesAmount + " 'this is a test' ";
 };
 
 $(document).ready(function() {
