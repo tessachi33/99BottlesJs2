@@ -18,8 +18,9 @@ var bottlesAmount = i + " bottles of absinthe on the wall " + i + " bottles of a
 
 $(document).ready(function() {
   $("form#bottle").submit(function() {
-    var amount = parseInt($("input#number").val());
+    var amount = parseInt($("input#bottlenumber").val());
     $(".song").text(bottlesAmount);
+    $(".results").show();
      event.preventDefault();
 
   });
