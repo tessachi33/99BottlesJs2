@@ -1,23 +1,29 @@
+
 <!DOCTYPE html>
 <html>
-<head>
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script src="js/jquery-1.11.3.js"></script>
-  <script src="js/scripts.js"></script>
-   <title>99 bottles</title>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>99 Bottles of....</title>
   </head>
   <body>
     <div class="container">
       <h1>How many bottles of Absinthe can you drink before your demise?</h1>
-      <form id="bottle">
-        <input id="buttonnumber" type="number" required=""><br><br>
-          <div>
-        <button type="submit" class="btn">don't choke!</button></div>
-      </form>
-      <div class="results">
-      <h5><span class="song"></span></h5>
-        </ul>
+      <form id="bottles">
+        <div class="form-group">
+          <label for="amount">Enter you amount responsibly:</label>
+          <input id="amount" type="number" required=""><br>
+
+        </div>
+
+        <button type="submit" class="btn">Don't choke?!</button>
+      </form><br>
+
+      <div id="results">
+        <h5 class="results">WOA <br> <span class="absinthe"></span></h5>
+       </div>
       </div>
     </div>
   </body>

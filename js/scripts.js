@@ -13,13 +13,13 @@ var getBottles = function(amount) {
 var bottlesAmount = i + " bottles of absinthe on the wall " + i + " bottles of absinthe, take a slug and pass it down " + (i -1) + " bottles of absinthe " + " no more bottles of absinthe on the wall, go to the grave you cannot drink more absinthe ";
   }
 
-  return bottlesAmount;
+  return bottlesAmount + " test for string";
 };
 
 $(document).ready(function() {
-  $("form#bottle").submit(function() {
-    var amount = parseInt($("input#bottlenumber").val());
-    $(".song").text(bottlesAmount);
+  $("form#bottles").submit(function() {
+    var amount = parseInt($("input#amount").val());
+    $(".absinthe").text(getBottles);
     $(".results").show();
      event.preventDefault();
 
