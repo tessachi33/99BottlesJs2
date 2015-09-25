@@ -8,25 +8,27 @@
 // Take one down, pass it around
 // 0 bottles of beer on the wall
 
-var bottles1 = " bottles of absinthe on the wall ";
-var bottles2 = " bottles of absinthe, take a slug and pass it down, ";
-var bottles3 =  " bottles of absinthe on the wall. ";
-var lastBottle =  " No more bottles of absinthe on the wall, go to the grave, you cannot drink more absinthe "
-
 var getBottles = function(amount) {
+   var verses = createVerses(amount);
+   return createSong(bottlesAmount); ;
 
-   for(var i = amount; i > 0; i--) {
+function createSong(verseArray) {
+return verseArray.join(""); }
 
-     var bottlesAmount[];
+function createVerse(bottlesAmount, i) {
+  var bottles1 = " bottles of absinthe on the wall ";
+  var bottles2 = " bottles of absinthe, take a slug and pass it down, ";
+  var bottles3 = " bottles of absinthe on the wall. ";
+  var lastBottle = " No more bottles of absinthe on the wall, go to the grave, you cannot drink more absinthe "
 
-      bottlesAmount.push(i + bottles1 + i + bottles2 + (i - 1) + bottles3);
+bottlesAmount.push(i + bottles1 + i + bottles2 + (i - 1) + bottles3); bottlesAmount.push(lastBottle);
+}
 
-      bottlesAmount.push(lastBottle);
+function createVerses(amount)
+{ var bottlesAmount = []; for(var i = amount; i > 0; i--) { createVerse(bottlesAmount, i);
+} return bottlesAmount; }
 
-        }
 
-  return bottlesAmount + " 'this is a test' ";  //+ " 'this is a test' "
-};
 
 $(document).ready(function() {
   $("form#bottles").submit(function() {
@@ -34,7 +36,7 @@ $(document).ready(function() {
     var bottlesAmount = getBottles(amount);
 
     $(".results").show();
-    $(".absinthe").text(getBottles);
+    $(".absinthe").text(bottlesAmount);
      event.preventDefault();
 
   });
